@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sentiment Analyzer</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+      }
+      textarea {
+        width: 400px;
+        height: 100px;
+        font-family: monospace;
+      }
+      input[type="submit"] {
+        margin-top: 10px;
+        padding: 5px 10px;
+      }
+      .result {
+        margin-top: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      You can use this web interface to determine the sentiment
+      (positive/negative) of a piece of text.
+    </p>
+
+    <form method="POST">
+      <textarea name="text" placeholder="Enter your text here...">
+{{ text }}</textarea
+      ><br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    {% if sentiment %}
+    <div class="result">
+      Text's sentiment is
+      <span style="text-transform: uppercase">{{ sentiment }}</span>.
+    </div>
+    {% endif %}
+  </body>
+</html>
