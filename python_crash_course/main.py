@@ -72,3 +72,10 @@ del x['key']
 for key, value in x.values():
     print(key, value)
 
+# Comprehension
+x = [x for x in range(10)]
+
+# Function
+def func():
+    print("function")
+
