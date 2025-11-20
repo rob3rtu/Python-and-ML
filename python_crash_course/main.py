@@ -67,9 +67,9 @@ x['key'] = 1
 exist = 'key' in x
 
 l = list(x.values())
-del x['key']
+# del x['key']
 
-for key, value in x.values():
+for key, value in x.items():
     print(key, value)
 
 # Comprehension
@@ -78,4 +78,12 @@ x = [x for x in range(10)]
 # Function
 def func():
     print("function")
+
+# Lambda
+x = lambda x: x + 4
+print(x(3))
+
+x = [1, 2, 3, 4, 5, 6, 7, 8, 9,]
+mp = map(lambda n: n + 6, x)
+print(list(mp))
 
